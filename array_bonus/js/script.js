@@ -27,9 +27,6 @@ const secondArray = [
 btn.addEventListener('click', function(){
 
     let randomNumber;
-    let x = secondArray.length;
-    let y = firstArray.length;
-
     
     while(secondArray.length !== firstArray.length){
         randomNumber = getRndInteger(1, 10);
