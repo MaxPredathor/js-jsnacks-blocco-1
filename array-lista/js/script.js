@@ -30,16 +30,14 @@ btn.addEventListener('click', function(){
         }else{
             cocomeroCheck = false;
         }
-
-        if(cocomeroCheck = true){
-            msg = 'Trovato! Devo solo preparare il cocktail.'
-        } else{
-            msg = 'Oh no, devo uscire a comprare il cocomero!'
-        }
-        
-
+    }
+    if(cocomeroCheck = true){
+        msg = 'Trovato! Devo solo preparare il cocktail.'
+    } else{
+        msg = 'Oh no, devo uscire a comprare il cocomero!'
     }
     resultEl.classList.remove('d-none');
-    resultEl.innerText(msg)
+    resultEl.innerHTML = msg;   
+    
   
 })
