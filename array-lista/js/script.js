@@ -19,18 +19,27 @@ fruttaFrigo.push(pesca)
 console.log(fruttaFrigo)
 
 btn.addEventListener('click', function(){
-    
+
     const cocomero = 'cocomero'
+    let cocomeroCheck = false;
+    let msg;
 
     for(let x = 0; x < fruttaFrigo.lenght; x++){
         if(cocomero === fruttaFrigo[x]){
-            resultEl.classList.remove('d-none');
-            resultEl.innerText('Trovato! Devo solo preparare il cocktail.');
+            cocomeroCheck = true;   
         }else{
-            resultEl.classList.remove('d-none');
-            resultEl.innerText('Oh no, devo uscire a comprare il cocomero!'); 
+            cocomeroCheck = false;
         }
-    }
 
+        if(cocomeroCheck = true){
+            msg = 'Trovato! Devo solo preparare il cocktail.'
+        } else{
+            msg = 'Oh no, devo uscire a comprare il cocomero!'
+        }
+        
+
+    }
+    resultEl.classList.remove('d-none');
+    resultEl.innerText(msg)
   
 })
