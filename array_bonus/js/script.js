@@ -27,14 +27,28 @@ const secondArray = [
 btn.addEventListener('click', function(){
 
     let randomNumber;
-    
-    while(secondArray.length !== firstArray.length){
-        randomNumber = getRndInteger(1, 10);
-        secondArray.push(randomNumber);
 
+    for(let i = 0; i < firstArray.length; i++){
+
+        let x = firstArray.length;
+        let y = secondArray.length;
+
+        if(x !== y){
+            randomNumber = getRndInteger(1, 10);
+            secondArray.push(randomNumber);
+
+        }
     }
     console.log(firstArray);
     console.log(secondArray);
+    
+    // while(secondArray.length !== firstArray.length){
+    //     randomNumber = getRndInteger(1, 10);
+    //     secondArray.push(randomNumber);
+
+    // }
+    // console.log(firstArray);
+    // console.log(secondArray);
 
   
 })
