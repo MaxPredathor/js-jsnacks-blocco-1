@@ -28,15 +28,31 @@ btn.addEventListener('click', function(){
 
     let randomNumber;
 
-    for(let i = 0; i < firstArray.length; i++){
+    if(firstArray.length > secondArray.length){
+        
+        for(let i = 0; i < firstArray.length; i++){
 
-        let x = firstArray.length;
-        let y = secondArray.length;
+            let x = firstArray.length;
+            let y = secondArray.length;
 
-        if(x !== y){
-            randomNumber = getRndInteger(1, 10);
-            secondArray.push(randomNumber);
+            if(x !== y){
+                randomNumber = getRndInteger(1, 10);
+                secondArray.push(randomNumber);
 
+            }
+        }
+
+    }else{
+        for(let i = 0; i < secondArray.length; i++){
+
+            let x = firstArray.length;
+            let y = secondArray.length;
+
+            if(y !== x){
+                randomNumber = getRndInteger(1, 10);
+                secondArray.push(randomNumber);
+
+            }
         }
     }
     console.log(firstArray);
